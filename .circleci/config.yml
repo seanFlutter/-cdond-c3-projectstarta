@@ -135,6 +135,7 @@ jobs:
             npm audit fix --audit-level=critical --force
             npsm audit fix --force
             npm audit --audit-level=critical
+            
   notify:
     docker:
       - image: 'cimg/base:stable'
