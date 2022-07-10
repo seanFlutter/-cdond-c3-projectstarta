@@ -140,8 +140,8 @@ jobs:
       - image: 'cimg/base:stable'
     steps:
       - slack/notify:
-          channel: C03DAJYL3SM
-          event: fail
+          
+          event: always
           template: basic_fail_1
           # custom: |
           #   {
