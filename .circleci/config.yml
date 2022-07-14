@@ -158,8 +158,6 @@ jobs:
           #     ]
           #   }
           # event: always
-
-
   deploy-infrastructure:
     docker:
       - image: amazon/aws-cli
@@ -342,17 +340,16 @@ workflows:
           requires: [build-backend]
       - scan-frontend:
           requires: [build-frontend]
-  end-notification:
-    jobs:
-      - notify:
-          context: slackproject3context
-  deploy:
-    jobs:
       - deploy-infrastructure:
           requires: [test-frontend, test-backend, scan-frontend, scan-backend]
           filters:
             branches:
               only: [master]
+  end-notification:
+    jobs:
+      - notify:
+          context: slackproject3context
+      
       # - configure-infrastructure:
       #     requires: [deploy-infrastructure]
       # - run-migrations:
