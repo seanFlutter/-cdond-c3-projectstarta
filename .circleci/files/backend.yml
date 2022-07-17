@@ -7,7 +7,7 @@ Parameters:
     Type: String
 Resources:
   InstanceSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
+    Type: AWS::EC2::SecurityGroups
     Properties:
       GroupName: !Sub UdaPeople-${ID}
       GroupDescription: Allow port 22 and port 3030.
@@ -32,5 +32,5 @@ Resources:
       # Ubuntu 18 or higher works fine
       ImageId: ami-052efd3df9dad4825 
       Tags:
-        - Key: Name
-          Value: !Sub backend-${ID}
+        - Key: project
+          Value: udapeople
