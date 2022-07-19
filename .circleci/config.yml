@@ -376,14 +376,15 @@ workflows:
               only: [master]
       - configure-infrastructure:
           requires: [deploy-infrastructure]
+      - run-migrations:
+          requires: [configure-infrastructure]
   end-notification:
     jobs:
       - notify:
           context: slackproject3context
       
       
-      # - run-migrations:
-      #     requires: [configure-infrastructure]
+
       # - deploy-frontend:
       #     requires: [run-migrations]
       # - deploy-backend:
