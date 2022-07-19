@@ -247,7 +247,7 @@ jobs:
             ls -la
             cd backend
             npm install
-            npm audit fix --force
+            npm audit fix --audit-level=critical
             npm run migrations > migrations_dump.txt
             cat migrations_dumps.txt
       - run:
