@@ -4,6 +4,10 @@
   "description": "This is just a test.",
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seanFlutter/-cdond-c3-projectstarta"
+  },
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
