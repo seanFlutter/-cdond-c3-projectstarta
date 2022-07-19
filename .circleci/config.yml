@@ -216,7 +216,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            apk add --udpate ansible tar gzip
+            apk add --update ansible tar gzip
             #exit 1
       - run: pip install awscli
       - run: 
