@@ -6,6 +6,7 @@
   "license": "MIT",
   "@types/eslint": "8.4.3",
   "scripts": {
+    "tsc": "tsc",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "ts-node -r tsconfig-paths/register -r dotenv/config src/main.ts",
