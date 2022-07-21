@@ -42,7 +42,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          keys: [frontend-build]
+          keys: [frontend-build1]
       - run:
           name: Build front-end
           command: |
@@ -53,7 +53,7 @@ jobs:
             # exit 1
       - save_cache:
           paths: [frontend/node_modules]
-          key: frontend-build
+          key: frontend-build1
 
   build-backend:
     docker:
@@ -61,7 +61,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          keys: [backend-build]
+          keys: [backend-build1]
       - run:
           name: Back-end build
           command: |
@@ -72,7 +72,7 @@ jobs:
             # exit 1
       - save_cache:
           paths: [backend/node_modules]
-          key: backend-build
+          key: backend-build1
 
   test-frontend:
     docker:
@@ -238,7 +238,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          keys: [backend-build]
+          keys: [backend-build1]
       - run:
           name: Run migrations
           command: |
