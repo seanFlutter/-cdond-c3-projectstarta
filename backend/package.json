@@ -4,6 +4,7 @@
   "description": "This is just a test.",
   "author": "",
   "license": "MIT",
+  "@types/eslint": "8.4.3",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
