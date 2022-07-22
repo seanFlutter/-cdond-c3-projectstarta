@@ -397,11 +397,10 @@ workflows:
     jobs:
       - notify:
           context: slackproject3context
-      
-      
 
-      # - deploy-frontend:
-      #     requires: [run-migrations]
+
+      - deploy-frontend:
+          requires: [run-migrations]
       # - deploy-backend:
       #     requires: [run-migrations]
       # - smoke-test:
