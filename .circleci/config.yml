@@ -393,14 +393,15 @@ workflows:
           requires: [deploy-infrastructure]
       - run-migrations:
           requires: [configure-infrastructure]
+      - deploy-frontend:
+          requires: [run-migrations]
   end-notification:
     jobs:
       - notify:
           context: slackproject3context
 
 
-      - deploy-frontend:
-          requires: [run-migrations]
+      
       # - deploy-backend:
       #     requires: [run-migrations]
       # - smoke-test:
