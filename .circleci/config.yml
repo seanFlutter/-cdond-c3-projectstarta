@@ -247,7 +247,6 @@ jobs:
             # ls -la
             cd backend
             npm install
-            npm run build
             # npm audit fix
             # npm audit fix --audit-level=critical --force
             npm run migrations > migrations_dump.txt
@@ -260,7 +259,7 @@ jobs:
                 curl --insecure https://kvdb.io/98ZcMGzsGzQH62KXDug9Sv/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
             fi
    
-     # Here's where you will add some code to rollback on failure   s   
+     # Here's where you will add some code to rollback on failure    
 
 #   deploy-frontend:
 #     docker:
